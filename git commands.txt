@@ -1,2 +1,3 @@
 git init > initialize a new Git repository
 git add <file> Stage a file for commit || git add . > Stage all changes
+git commit -m "message" > commit staged changes with a message
