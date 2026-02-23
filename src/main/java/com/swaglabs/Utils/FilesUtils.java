@@ -103,4 +103,24 @@ public class FilesUtils {
             LogsUtil.error("Filed to rename file : " + e.getMessage());
         }
     }
+
+    public static void createDirectory(File path) {
+        if (!path.exists()) {
+            try {
+                Files.createDirectories(path.toPath());
+                LogsUtil.info("Directory created:" + path);
+            } catch (IOException e) {
+                LogsUtil.error("failed to create directory:" + e.getMessage());
+            }
+         } else {
+            LogsUtil.info("Directory already exists" + path);
+        }
+    }
+
+
+
+
+
+
+
 }
